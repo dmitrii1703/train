@@ -16,8 +16,9 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             //random.nextInt(101); //тут возможно я сгернерировал 100 чисел, а дальше не знаю что, но видимо, как только я получу 100 чисел, я смогу в случайной последовательности некоторые записать в массив
             array[i] = random.nextInt(101);
-            System.out.println("Массив: " + array[i]);
         }
+
+        //System.out.println("Массив: " + Arrays.toString(array));
 
         int min = 0;
         int max = 100;
@@ -31,7 +32,7 @@ public class Main {
                 min = array[i];
             }
         }
-        System.out.println("Максимальное число: " + min);
+        //System.out.println("Максимальное число: " + min);
 
         //int max = 100;
 
@@ -40,13 +41,13 @@ public class Main {
                 max = array[i];
             }
         }
-        System.out.println("Минимальное число:" + max);
+        //System.out.println("Минимальное число:" + max);
 
         for (int i = 0; i < array.length; i++) {
 
             num += array[i];
         }
-        System.out.println("Сумма: " + num);
+        //System.out.println("Сумма: " + num);
 
         for (int i = 0; i < array.length; i++) {
             if (start > array[i]) {
@@ -57,7 +58,7 @@ public class Main {
             }
             //и как то так я хотел дойти до середины массива, удаляя числа по краям, но вспомнил, что длинна массива не меняется
         }
-        System.out.println( "среднее: " + num/10);
+        //System.out.println( "среднее: " + num/10);
 
 
         int minimum = Arrays.stream(array).min().getAsInt();
@@ -65,13 +66,47 @@ public class Main {
         int sumSum = Arrays.stream(array).sum();
         double average = Arrays.stream(array).average().getAsDouble();
 
-        System.out.println("Минимальное" + minimum);
-        System.out.println("Максимальное" + maximum);
-        System.out.println("Сумма" + sumSum);
-        System.out.println("среднее" + average);
+//        System.out.println("Минимальное" + minimum);
+//        System.out.println("Максимальное" + maximum);
+//        System.out.println("Сумма" + sumSum);
+//        System.out.println("среднее" + average);
 
     //arab();
-        nextIssue();
+        // nextIssue();
+        //createProducts();
+        //scun();
+        String[] list = List.of("2", "Arra", "Said").toArray(new String[0]);
+        count(list);
+    }
+
+    public static void createProducts() {
+        Random random = new Random();
+        List<Product> products = new ArrayList<>();
+
+        for (int i = 0; i<random.nextInt(8) + 1; i++) {
+
+            products.add(new PhisicalProduct(
+
+                    random.nextInt(101) + 1,
+                    "Настольная игра",
+                    random.nextInt(700) + 1,
+                    random.nextInt(4) + 1
+            ));
+
+            products.add(new DigitalProduct(
+                    random.nextInt(101) + 1,
+                    "Игра в стиме",
+                    random.nextInt(700) + 1,
+                    random.nextInt(5000) + 1
+            ));
+        }
+
+
+        //products.forEach(System.out::println);
+    }
+
+    public static void countProducts(List<Product> products) {
+            products.forEach(System.out::println);
     }
 
     public static void arab() {
@@ -113,6 +148,19 @@ public class Main {
 
     }
 
+    public static void scun() {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        System.out.println("Введите количество участников: ");
+        int x = scanner.nextInt();
+        int y = random.nextInt(x) + 1 ;
+        System.out.println("Победил : " + y);
+    }
+
+    public static void count(String[] participants) {
+        long counts = Arrays.stream(participants).count();
+        System.out.println("count: " + counts);
+    }
 }
 
 
