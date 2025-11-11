@@ -6,21 +6,130 @@ import java.util.Scanner;
 
 public class ElevenOct {
     public static void main(String[] args) {
-        MagicalContainer myTreasureChest = new MagicalContainer();
-        myTreasureChest.magicValue = 15;
-        attemptToEnchantContainer(myTreasureChest);
-        System.out.println(myTreasureChest.magicValue);
-    }
-
-    public static void attemptToEnchantContainer(MagicalContainer magicalContainer) {
-        magicalContainer.magicValue = 99;
-        magicalContainer = new  MagicalContainer();
-        magicalContainer.magicValue = 42;
-    }
-    static class MagicalContainer {
-        public int magicValue;
+            StringBuilder sb = new StringBuilder("Я люблю Java!");
+            sb.delete(2, 7);
+        //System.out.println(sb);
+        sb.replace(3, 7, "программирование");
+        System.out.println(sb);
+        System.out.println("C:\\Temp\\file.txt");
     }
 }
+/*
+Вы — редактор текстов будущего, работающий над системой персонализации рекламных сообщений.
+Иногда требуется быстро отредактировать шаблонное сообщение: удалить лишние слова, чтобы оно стало более нейтральным,
+а затем заменить ключевое слово на более подходящее по контексту. Гибкость и точность — ваши инструменты.
+
+Возьмите стартовую фразу "Я люблю Java!" в вашем StringBuilder. Ваша задача состоит из двух этапов:
+сначала удалите из неё слово "люблю" (помните о сохранении пробелов!), чтобы структура предложения не нарушалась.
+Затем замените слово "Java" на "программирование", чтобы фраза обрела новый смысл. В конце выведите получившуюся обновлённую фразу на экран,
+демонстрируя свои навыки "хирургии" текста.
+ */
+
+
+
+
+//        StringBuilder sb = new  StringBuilder("abcdef");
+//        System.out.println(sb.reverse());
+//    }
+//}
+/*
+Вы участвуете в криптографическом квесте, где одно из заданий — прочитать зашифрованное сообщение, которое было записано задом наперёд.
+
+Вы — дешифровщик древних свитков, и вам нужно быстро и эффективно "отзеркалить" текст, чтобы раскрыть его смысл. Каждая буква на своём месте — ключ к разгадке!
+
+Создайте объект StringBuilder, содержащий загадочную последовательность "abcdef".
+
+Ваша задача — использовать подходящий метод, чтобы полностью развернуть эту строку, прочитав её задом наперёд.
+
+Выведите получившуюся "отзеркаленную" строку на экран, раскрывая тайну послания.
+ */
+
+
+
+//        StringBuilder sb = new StringBuilder("Привет, мир!");
+//        int pisSb = sb.indexOf(",") + 2 ;
+//        System.out.println(pisSb);
+//        sb.insert(pisSb, "Java ");
+//        System.out.println(sb);
+//        }
+//}
+
+/*
+Вы — дирижёр слов, работающий над автоматическим приветствием в чат-боте. Иногда нужно элегантно "вплести" дополнительное слово или
+фразу в уже готовое сообщение, чтобы сделать его более персонализированным или информативным, не переписывая всё сообщение заново.
+
+Ваша задача — начать с объекта StringBuilder, содержащего фразу "Привет, мир!". Ваша миссия — найти место после запятой и
+с помощью метода insert() добавить туда слово "Java" (обратите внимание на пробел!), чтобы в итоге получилось "Привет, Java мир!".
+
+Выведите изменённое приветствие на экран, демонстрируя свою способность точно управлять текстом.
+ */
+
+
+//
+//            StringBuilder sb = new StringBuilder();
+//            sb.append("Java");
+//            sb.append(" - это круто!");
+//            System.out.println(sb);
+//    }
+//}
+
+/*
+Представьте, что вы — кулинар строк, разрабатывающий динамический текстовый генератор для маркетингового приложения.
+Вам нужно "приготовить" идеальное рекламное сообщение, которое будет меняться в зависимости от контекста. Начать нужно с основы,
+а затем к ней добавлять "изюминки". Эффективность и гибкость — ваш девиз.
+
+Ваша задача — создать объект StringBuilder, начав его со слова "Java". Затем, используя метод append(), добавьте к нему фразу " - это круто!",
+чтобы получился полный и воодушевляющий лозунг. В конце выведите получившуюся строку на экран. Покажите, как легко и мощно можно строить строки по частям.
+ */
+
+
+/*
+Метод	Описание	Пример использования
+append(...)
+Добавить в конец строку, число, символ и т.д.
+sb.append("Java");
+
+insert(index, ...)
+Вставить значение в указанную позицию
+sb.insert(0, "Hello ");
+
+delete(start, end)
+Удалить символы с позиции start (включ.) до end (не включ.)
+sb.delete(0, 5);
+
+replace(start, end, str)
+Заменить часть строки другим содержимым
+sb.replace(0, 4, "Hi");
+
+reverse()
+Развернуть строку задом наперёд
+sb.reverse();
+
+toString()
+Преобразовать в обычную строку
+String s = sb.toString();
+setLength(newLen)
+Обрезать или дополнить строку до заданной длины
+sb.setLength(3);
+ */
+
+
+
+//        MagicalContainer myTreasureChest = new MagicalContainer();
+//        myTreasureChest.magicValue = 15;
+//        attemptToEnchantContainer(myTreasureChest);
+//        System.out.println(myTreasureChest.magicValue);
+//    }
+//
+//    public static void attemptToEnchantContainer(MagicalContainer magicalContainer) {
+//        magicalContainer.magicValue = 99;
+//        magicalContainer = new  MagicalContainer();
+//        magicalContainer.magicValue = 42;
+//    }
+//    static class MagicalContainer {
+//        public int magicValue;
+//    }
+//}
 
 /*
 Вообразите, что вы хранитель волшебных шкатулок, каждая из которых содержит в себе некое магическое число,
